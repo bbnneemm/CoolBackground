@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle.js测试</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    #test{
+        width: 100vw;
+        height:100vh;
+        position: relative;
+      
+    }
+    #test2{
+        width: 200px;
+        height: 200px;
+        top: 200px;
+        left: 340px;
+        background-color: #E0E0E0;
+        position: absolute;
+        text-align: center;
+        line-height: 200px;
+        color:blue;
+    }
+    #test3{
+        width: 200px;
+        height: 200px;
+        top: 200px;
+        left: 888px;
+        background-color: #E0E0E0;
+        position: absolute;
+        text-align: center;
+        line-height: 200px;
+        color: blue;
+    }
+</style>
+<body>
+    <div class="test" id="test">
+        <div id="test2">区域1</div>
+        <div id="test3">区域2</div>
+    </div>
+</body>
+<script src="./Particle.js"></script>
+<script>
+    let particle = new Particle({
+        divWrapper: 'test',
+        divInner: ['test2','test3'],
+        amount: 100,
+        radius: 10,
+        color: ['#E08031','#C7CEB2','#199475','#0B6E48','#044D22']
+    })
+    particle.movestart()
+</script>
+</html>
